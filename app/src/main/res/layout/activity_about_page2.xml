@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutPage2"
+    android:background="@drawable/aboutpage2"
+    >
+
+    <Button
+        android:id="@+id/aboutpage2btn"
+        android:layout_width="302dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/button_layout"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Continue"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="284dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/inter"
+        android:gravity="center"
+        android:shadowColor="#000000"
+        android:shadowDx="1.5"
+        android:shadowDy="1.3"
+        android:shadowRadius="1.6"
+        android:text="Book Your Space, Live Your Best Campus Life"
+        android:textAllCaps="false"
+        android:textColor="@color/maroon"
+        android:textSize="25sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="258dp"
+        android:layout_height="78dp"
+        android:layout_marginBottom="48dp"
+        android:gravity="center"
+        android:text="Secure a cozy and vibrant living space to make the most of your university years"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/aboutpage2btn"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
