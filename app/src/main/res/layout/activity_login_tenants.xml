@@ -5,7 +5,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".Login_Tenants">
 
     <TextView
@@ -27,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Manage your accommodation with SWI PHINMA"
+        android:text="Manage your accommodation with SWU PHINMA"
         android:textSize="13sp"
         app:layout_constraintStart_toStartOf="@id/signIn"
         app:layout_constraintEnd_toEndOf="@id/signIn"
@@ -55,7 +54,7 @@
             android:layout_marginBottom="10dp" />
 
         <EditText
-            android:id="@+id/StudentsEmail"
+            android:id="@+id/inp_lessor_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -68,7 +67,7 @@
             android:padding="20dp" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/txt_pass_lessor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Password"
@@ -76,7 +75,7 @@
             android:layout_marginBottom="10dp" />
 
         <EditText
-            android:id="@+id/StudentsPassword"
+            android:id="@+id/inp_lessor_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -88,11 +87,12 @@
             android:padding="20dp" />
 
         <Button
-            android:id="@+id/LoginButtonStudents"
+            android:id="@+id/btn_login_lessor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/button_layout"
             android:text="Log In"
+            android:layout_marginTop="20dp"
             android:textColor="@color/white"
             android:padding="10sp" />
     </LinearLayout>

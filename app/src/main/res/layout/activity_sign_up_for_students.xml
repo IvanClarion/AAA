@@ -5,9 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpForStudents"
-
-    >
+    tools:context=".SignUpForStudents">
 
     <!-- Welcome Message -->
 
@@ -76,12 +74,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
-            android:text="Full Name"
+            android:text="Student ID"
             android:textColor="@color/black" />
 
 
         <EditText
-            android:id="@+id/StudentSignUpName"
+            android:id="@+id/StudentID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -138,6 +136,7 @@
             android:background="@drawable/button_layout"
             android:padding="10sp"
             android:text="Sign Up"
+            android:layout_marginTop="20dp"
             android:textColor="@color/white" />
     </LinearLayout>
 
