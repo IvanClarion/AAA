@@ -16,8 +16,9 @@ class Profile_Student : AppCompatActivity() {
 
     private lateinit var nameEditText: EditText
     private lateinit var emailEditText: EditText
+    private lateinit var passwordEditText: EditText // Added password EditText
     private lateinit var editButton: ImageButton
-    private lateinit var saveButton: Button // Add save button
+    private lateinit var saveButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,15 +33,16 @@ class Profile_Student : AppCompatActivity() {
         // Initialize views
         nameEditText = findViewById(R.id.nameEditText)
         emailEditText = findViewById(R.id.emailEditText)
+        passwordEditText = findViewById(R.id.passwordEditText) // Initialize password EditText
         editButton = findViewById(R.id.editButton)
-        saveButton = findViewById(R.id.profile_save) // Initialize save button
+        saveButton = findViewById(R.id.profile_save)
 
         // Initially disable the EditText fields and the save button
         nameEditText.isEnabled = false
         emailEditText.isEnabled = false
-        saveButton.isEnabled = false // Disable save button initially
-        saveButton.visibility = View.GONE // Hide save button initially
-
+        passwordEditText.isEnabled = false // Disable password EditText
+        saveButton.isEnabled = false
+        saveButton.visibility = View.GONE
 
         val backButton = findViewById<ImageButton>(R.id.backButton)
         backButton.setOnClickListener {
@@ -62,28 +64,31 @@ class Profile_Student : AppCompatActivity() {
         // Toggle the enabled state of the EditText fields
         nameEditText.isEnabled = !nameEditText.isEnabled
         emailEditText.isEnabled = !emailEditText.isEnabled
+        passwordEditText.isEnabled = !passwordEditText.isEnabled // Toggle password EditText
 
         // Toggle visibility and enabled state of save button
         saveButton.visibility = if (nameEditText.isEnabled) View.VISIBLE else View.GONE
         saveButton.isEnabled = nameEditText.isEnabled
-
-        // No longer changing the edit button icon
-
     }
 
     fun onSaveButtonClicked() {
         // Here you would save the data from the EditText fields
         val name = nameEditText.text.toString()
         val email = emailEditText.text.toString()
+        val password = passwordEditText.text.toString() // Get password
 
-        //For now, let's just show a toast
-        Toast.makeText(this, "Saving Profile...\nName: $name\nEmail: $email", Toast.LENGTH_SHORT).show()
+        // For now, let's just show a toast
+        Toast.makeText(
+            this,
+            "Saving Profile...\nName: $name\nEmail: $email\nPassword: $password", // Include Password in the toast (FOR DEMO ONLY)
+            Toast.LENGTH_SHORT
+        ).show()
 
         // Disable EditText fields and hide save button after saving
         nameEditText.isEnabled = false
         emailEditText.isEnabled = false
+        passwordEditText.isEnabled = false // Disable password EditText
         saveButton.visibility = View.GONE
         saveButton.isEnabled = false
-
     }
 }
