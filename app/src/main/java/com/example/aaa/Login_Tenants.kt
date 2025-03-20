@@ -5,10 +5,9 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.aaa.MainActivity
-import com.example.aaa.R
 import com.google.firebase.firestore.FirebaseFirestore
 import java.security.MessageDigest
 
@@ -17,6 +16,7 @@ class Login_Tenants : AppCompatActivity() {
     private lateinit var emailInput: EditText
     private lateinit var passwordInput: EditText
     private lateinit var loginButton: Button
+    private lateinit var signUp: TextView  // Declare signUp properly
     private val db = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,6 +26,7 @@ class Login_Tenants : AppCompatActivity() {
         emailInput = findViewById(R.id.inp_lessor_email)
         passwordInput = findViewById(R.id.inp_lessor_password)
         loginButton = findViewById(R.id.btn_login_lessor)
+        signUp = findViewById(R.id.SignUp)  // Initialize signUp
 
         loginButton.setOnClickListener {
             val email = emailInput.text.toString().trim()
@@ -38,23 +39,30 @@ class Login_Tenants : AppCompatActivity() {
 
             loginUser(email, password)
         }
+
+        signUp.setOnClickListener {
+            val intent = Intent(this, SignUp::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun loginUser(email: String, password: String) {
         val hashedPassword = hashPassword(password)
 
-        db.collection("user_student")
-            .whereEqualTo("email", email) // Find document where email matches
+        db.collection("user_lessor")  // ✅ Corrected collection name
+            .whereEqualTo("email", email)
             .get()
             .addOnSuccessListener { documents ->
                 if (!documents.isEmpty) {
                     for (document in documents) {
-                        val storedPassword = document.getString("password")
+                        val storedPassword = document.getString("password") ?: ""
+
+                        Log.d("LoginDebug", "Stored Password: $storedPassword")
+                        Log.d("LoginDebug", "Entered Password: $hashedPassword")
+
                         if (storedPassword == hashedPassword) {
                             Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
-
-                            // Redirect to main dashboard
-                            val intent = Intent(this, MainActivity::class.java)
+                            val intent = Intent(this, TenantsPage::class.java)
                             startActivity(intent)
                             finish()
                         } else {

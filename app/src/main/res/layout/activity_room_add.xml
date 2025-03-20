@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RoomAdd"
+    android:layout_margin="20dp"
+    android:padding="16dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <!-- Back Button & Title -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/backButton"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/arrow_back"
+                    android:contentDescription="Back"
+                    android:layout_marginEnd="16dp"/>
+
+                <TextView
+                    android:id="@+id/addRoomTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Room"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Image Upload Button -->
+            <Button
+                android:id="@+id/btnUploadImage"
+                android:background="@drawable/button_layout"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Insert Image"
+                android:layout_marginTop="24dp"/>
+
+            <!-- Room Type Input -->
+            <EditText
+                android:id="@+id/etRoomType"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Room Type"
+                android:background="@drawable/rounded_edittext"
+                android:inputType="text"
+                android:layout_marginTop="16dp"
+                android:padding="12dp"/>
+
+            <!-- Room Slot Input -->
+            <EditText
+                android:id="@+id/etRoomSlot"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/rounded_edittext"
+                android:hint="Room Slot"
+                android:inputType="number"
+                android:layout_marginTop="12dp"
+                android:padding="12dp"/>
+
+            <!-- Room Price Input -->
+            <EditText
+                android:id="@+id/etRoomPrice"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/rounded_edittext"
+                android:hint="Room Price"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="12dp"
+                android:padding="12dp"/>
+
+            <!-- Address Input -->
+            <EditText
+                android:id="@+id/etRoomAddress"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/rounded_edittext"
+                android:hint="Address"
+                android:inputType="textPostalAddress"
+                android:layout_marginTop="12dp"
+                android:padding="12dp"/>
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/btnSubmitRoom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:background="@drawable/button_layout"
+                android:text="Submit"
+                android:layout_marginTop="24dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
