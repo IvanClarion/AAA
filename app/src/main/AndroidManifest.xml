@@ -13,6 +13,9 @@
         android:theme="@style/Theme.AAA"
         tools:targetApi="31">
         <activity
+            android:name=".TenantsEditRoom"
+            android:exported="false" />
+        <activity
             android:name=".RoomAdd"
             android:exported="false" />
         <activity

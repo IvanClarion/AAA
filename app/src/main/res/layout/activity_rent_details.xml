@@ -9,8 +9,6 @@
     android:orientation="vertical"
     android:background="@android:color/white">
 
-
-
     <!-- Back Button and Title -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,6 +31,7 @@
             android:text="Detail"
             android:textSize="20sp"
             android:textStyle="bold"
+            android:textColor="@android:color/black"
             android:gravity="center"
             android:paddingStart="16dp" />
     </LinearLayout>
@@ -67,10 +66,70 @@
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 android:src="@drawable/sampleimage1" />
-
         </LinearLayout>
 
+
     </HorizontalScrollView>
+    <!-- Horizontal Category Section -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- WiFi Category -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WiFi"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:background="@drawable/button_layout"
+                    android:layout_marginEnd="16dp" />
+
+                <!-- Bed Spacers Category -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bed Spacers"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/button_layout"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:layout_marginEnd="16dp" />
+
+                <!-- Air Conditioning Category -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Aircon"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/button_layout"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:layout_marginEnd="16dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
 
     <!-- Scrollable Content -->
     <ScrollView
@@ -92,6 +151,7 @@
                 android:layout_height="wrap_content"
                 android:text="K and E Dormitory offers comfortable rooms for two..."
                 android:textSize="14sp"
+                android:textColor="@android:color/black"
                 android:lineSpacingExtra="4sp"
                 android:layout_marginBottom="12dp" />
 
@@ -101,9 +161,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Price"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
-                android:layout_marginTop="8dp" />
+                android:textColor="@android:color/black"
+                android:layout_marginTop="12dp" />
 
             <TextView
                 android:id="@+id/PriceValue"
@@ -111,9 +172,60 @@
                 android:layout_height="wrap_content"
                 android:text="₱5,500 - 7,500"
                 android:textSize="18sp"
-                android:textColor="@android:color/holo_red_dark"
+                android:textColor="@color/maroon"
                 android:textStyle="bold"
-                android:layout_marginBottom="12dp" />
+                android:layout_marginBottom="16dp" />
+
+            <!-- Address Section -->
+            <TextView
+                android:id="@+id/AddressLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" Address"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="12dp"
+                android:paddingBottom="4dp" />
+
+            <TextView
+                android:id="@+id/AddressValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1234 Dormitory St, City, Province, Philippines"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Contact Details Section -->
+            <TextView
+                android:id="@+id/ContactLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contact Details"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="12dp"
+                android:paddingBottom="4dp" />
+
+            <TextView
+                android:id="@+id/PhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone: 0912 345 6789"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/EmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email: contact@kedorms.com"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="16dp" />
         </LinearLayout>
     </ScrollView>
 

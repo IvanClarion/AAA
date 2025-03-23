@@ -7,8 +7,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LessorsRooms"
-    android:padding="16dp"
-    android:layout_margin="20dp"
+
+
     >
 
     <androidx.core.widget.NestedScrollView
@@ -20,7 +20,7 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
-
+            android:padding="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -44,12 +44,12 @@
                 android:nestedScrollingEnabled="false"/>
 
             <LinearLayout
+                android:id="@+id/roomCardLayout"
                 android:background="@drawable/card_background"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:elevation="10dp"
-
                 android:padding="16dp">
 
                 <ImageView
@@ -71,6 +71,8 @@
                     android:textColor="@android:color/black"
                     android:layout_marginStart="16dp"/>
             </LinearLayout>
+
+
 
         </LinearLayout>
 

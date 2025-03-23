@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RoomAdd"
-
-    android:padding="16dp">
+    tools:context=".TenantsEditRoom">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -19,6 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:padding="16dp"
             android:paddingBottom="24dp">
 
             <!-- Back Button & Title -->
@@ -40,7 +38,7 @@
                     android:id="@+id/addRoomTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Add Room"
+                    android:text="Edit Room"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"/>
@@ -54,7 +52,7 @@
                 android:padding="10dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="Insert Image"
+                android:text="Change Image"
                 android:layout_marginTop="24dp"/>
 
             <!-- Image Preview Boxes -->
@@ -160,9 +158,18 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:background="@drawable/button_layout"
-                android:text="Submit"
+                android:text="Save Changes"
                 android:layout_marginTop="24dp"/>
+            <Button
+                android:id="@+id/deleteRoom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:background="@drawable/button_layout"
+                android:text="Delete Room"
+                android:layout_marginTop="10dp"/>
 
         </LinearLayout>
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
