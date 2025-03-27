@@ -53,6 +53,10 @@ dependencies {
         exclude(group = "com.google.firebase", module = "firebase-common")
     }
 
+    // Glide (Bumptech) - Image loading library
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
+
     // Ensure correct Kotlin version
     implementation(libs.kotlin.stdlib)
     implementation(libs.androidx.navigation.runtime.ktx)

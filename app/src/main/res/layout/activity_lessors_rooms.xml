@@ -43,34 +43,7 @@
                 android:layout_height="wrap_content"
                 android:nestedScrollingEnabled="false"/>
 
-            <LinearLayout
-                android:id="@+id/roomCardLayout"
-                android:background="@drawable/card_background"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:elevation="10dp"
-                android:padding="16dp">
 
-                <ImageView
-                    android:id="@+id/roomImage"
-                    android:layout_margin="10sp"
-                    android:background="@drawable/corner_general"
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/sampleimage1"/>
-
-                <TextView
-                    android:id="@+id/roomName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Room Name"
-                    android:textStyle="bold"
-                    android:textSize="20sp"
-                    android:textColor="@android:color/black"
-                    android:layout_marginStart="16dp"/>
-            </LinearLayout>
 
 
 
